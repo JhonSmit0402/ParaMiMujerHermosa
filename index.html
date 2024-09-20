@@ -7,18 +7,42 @@
     <title>Un Regalo para Ti</title>
     <style>
         body {
-            background: linear-gradient(to right, #ff9a9e, #fad0c4);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
             margin: 0;
-            font-family: 'Arial', sans-serif;
+            padding: 0;
+            height: 100vh;
+            width: 100%;
+            font-family: 'Courier New', monospace;
             color: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Imagen de fondo difuminada */
+        .blurred-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('MiYosi2.jpeg'); /* Reemplaza con la URL de la foto de tu novia */
+            background-size: cover;
+            background-position: center;
+            filter: blur(8px); /* Aplica un desenfoque a la imagen de fondo */
+            z-index: -1; /* Asegura que el fondo esté detrás del contenido */
         }
 
         .container {
             text-align: center;
+            position: relative;
+            z-index: 2; /* Asegura que el contenido esté por encima del fondo */
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente detrás del contenido */
+            border-radius: 10px;
+            height: 100%; /* Ocupa toda la altura */
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Centra verticalmente el contenido */
+            align-items: center; /* Centra horizontalmente el contenido */
         }
 
         h1 {
@@ -28,23 +52,26 @@
         }
 
         p {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
+            font-size: 1rem;
+            margin-bottom: 30px;
+            width: 800px; /* Ancho fijo para los párrafos */
+            text-align: justify; /* Justifica el texto */
         }
 
-        img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        .button-container {
+            position: absolute;
+            right: 40px; /* Espaciado desde la izquierda */
+            bottom: 20px; /* Espaciado desde la parte inferior */
+            z-index: 3; /* Asegura que el botón esté por encima de otros elementos */
         }
 
         button {
             background-color: #ff6f61;
             color: white;
             border: none;
-            padding: 10px 20px;
-            font-size: 1.2rem;
+            padding: 8px 15px; /* Tamaño más pequeño */
+            font-size: 1rem; /* Tamaño de fuente reducido */
+            font-family: 'Sacramento', cursive;
             border-radius: 20px;
             cursor: pointer;
             transition: background-color 0.3s ease;
@@ -56,17 +83,19 @@
     </style>
 </head>
 <body>
+    <img src="MiYosi2.jpeg" alt="Foto de mi novia" class="blurred-image">
     <div class="container">
-        <h1>Para mi preciosa Yosi</h1>
+        <h1>INTRODUCCIÓN 💖</h1>
         
-        <p>Un pequeño gesto para recordarte lo especial que eres para mí.</p>
-        
-        <img src="https://via.placeholder.com/150" alt="Foto de Nosotros">
+        <p>¿Cómo poder explicarlo? ✨ Me despierto y mi primer pensamiento eres tú, me voy a dormir y el último de mis pensamientos también eres tú, estás en mi mente las 24 horas de los 7 días de la semana. 
+            Cómo poder decirte con exactitud que eres esa personita que con solo un mensaje, con solo pocas palabras eres capaz de alegrar tanto a mi corazoncito que se acelera de solo imaginar los momentos que compartiremos juntos en un futuro no muy lejano. 🌼 Sé que no soy mucho de hacer estas cositas, pero lo que me mueve cada día, lo que me tiene haciendo este detallito es el inmenso amor que te tengo, aquel amor infinito con las infinitas ganas de hacerte saber por cualquier modo posible que sí, ERES TÚ, eres a quien miramos siempre, porque al corazón no se le puede engañar, al corazón no se le puede negar el amor que se siente incluso a kilómetros de distancia. 💞
+            No importa que tanto tenga que esperar, no importa que tantas pruebas tengamos que soportar, te aseguro que aunque apartes tus ojitos de mí por un segundo o por mil años, los míos aún seguirán viendo hacia ti, buscando aquella mirada llena de brillo que nos daba ese último rayito de esperanza de vida para este corazoncito. 🌟 Y es que el día de hoy quise y quiero hacerme presente con estas palabras escritas de corazón y con un pequeño detallito más, para dejarte saber que fuiste, eres y seguirás siendo solamente TÚ.💌
+            Este presente te lo doy con todas las mejores intenciones que vienen desde mi corazoncito, siguiendo y buscando el amor del tuyo.💖 TE AMO MI BLANQUITA PRECIOSA 💖 </p>
+    </div>
 
-        <p>Desde el primer momento, supé que estarías en mi vida. Gracias por iluminar cada uno de mis días.</p>
-
+    <div class="button-container">
         <!-- Botón que lleva al siguiente archivo HTML -->
-        <button onclick="window.location.href='RegaloYosi.html'">Siguiente Sorpresa</button>
+        <button onclick="window.location.href='RegaloYosi.html'">Siguiente 👉</button>
     </div>
 </body>
 </html>
